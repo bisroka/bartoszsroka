@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "McLaren", cursive;
+}
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section {
+  overflow: hidden;
+  margin-top: 5vh;
+}
+
+.header {
+  background-image: url("../img/programmer-1653351_1280.png");
+  // opacity: 0.85;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  margin-top: 0;
+  a {
+    text-decoration: none;
+  }
+  .header1 {
+    background-color: rgba($color: #6d7f88, $alpha: 0.9);
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    font-size: 36px;
+    text-align: center;
+    color: rgb(241, 234, 234);
+    text-transform: uppercase;
+  }
+  .header2 {
+    background-color: rgba($color: #6d7f88, $alpha: 0.9);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: rgb(241, 234, 234);
+    font-size: 28px;
+    text-align: center;
+  }
+  .start__icon {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    bottom: 7vh;
+    height: auto;
+    width: 100%;
+    .start__circle {
+      border: 1px solid #607d8b;
+      border-radius: 50%;
+      height: 12vh;
+      width: 12vh;
+      background-color: #cfd8dc;
+      overflow: hidden;
+      .fas {
+        display: block;
+        width: auto;
+        font-size: 5vh;
+        text-align: center;
+        color: #607d8b;
+        text-shadow: 0 -2px 3px #90a4ae;
+        animation-name: arrow;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      &:hover {
+      }
+    }
+  }
+  @media (min-height: 660px) and (orientation: portrait) {
+    .header1 {
+      padding-top: 7vh;
+      font-size: 40px;
+    }
+    .header2 {
+      padding-bottom: 5vh;
+      font-size: 32px;
+    }
+  }
+  @media (min-height: 730px) and (orientation: portrait) {
+    .header1 {
+      padding-top: 7vh;
+      font-size: 44px;
+    }
+    .header2 {
+      padding-bottom: 5vh;
+      font-size: 36px;
+    }
+  }
+  @media (min-height: 1020px) and (orientation: portrait) {
+    .header1 {
+      padding-top: 10vh;
+      font-size: 56px;
+    }
+    .header2 {
+      padding-bottom: 10vh;
+      font-size: 42px;
+    }
+  }
+
+  @media (min-width: 660px) and (orientation: landscape) {
+    .header1 {
+      padding-top: 7vh;
+      font-size: 40px;
+    }
+    .header2 {
+      padding-bottom: 5vh;
+      font-size: 32px;
+    }
+  }
+  @media (min-width: 730px) and (orientation: landscape) {
+    .header1 {
+      padding-top: 7vh;
+      font-size: 44px;
+    }
+    .header2 {
+      padding-bottom: 5vh;
+      font-size: 36px;
+    }
+  }
+  @media (min-width: 1020px) and (orientation: landscape) {
+    .header1 {
+      padding-top: 10vh;
+      font-size: 56px;
+    }
+    .header2 {
+      padding-bottom: 10vh;
+      font-size: 42px;
+    }
+  }
+}
+
+.aboutme {
+  background-color: #607d8b;
+  height: 100vh;
+  padding-top: 5vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "head"
+    "website"
+    "trend"
+    "technolo"
+    "responsive";
+  @media (orientation: landscape) {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "head head"
+      "website trend"
+      "technolo responsive";
+  }
+  @media (min-width: 500px) {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "head head"
+      "website trend"
+      "technolo responsive";
+  }
+  div {
+    padding: 2vh 4vh;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-height: 730px) {
+      font-size: 16px;
+    }
+    @media (min-width: 700px) {
+      font-size: 18px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 20px;
+    }
+  }
+  p {
+    text-align: center;
+  }
+  .aboutme__head {
+    grid-area: head;
+    font-size: 18px;
+    text-transform: unset;
+    text-align: center;
+    @media (min-height: 1020px) and (orientation: portrait) {
+      font-size: 32px;
+    }
+    @media (min-width: 700px) {
+      font-size: 26px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 32px;
+    }
+  }
+  img {
+    height: 10vh;
+    width: auto;
+    @media (min-height: 660px) {
+      height: 12vh;
+    }
+
+    @media (orientation: landscape) {
+      height: 20vh;
+    }
+  }
+  .website--img {
+    grid-area: website;
+    background-color: #e7e0e0;
+    text-align: center;
+  }
+  .trend--img {
+    grid-area: trend;
+    background-color: #fff;
+    text-align: center;
+  }
+  .technolo--img {
+    grid-area: technolo;
+    background-color: #c3d2d9;
+    text-align: center;
+  }
+  .responsive--img {
+    grid-area: responsive;
+    background-color: #d6dee1;
+    text-align: center;
+  }
+}
+
+.portfolio {
+  background-color: #b7c4ca;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "head"
+    "lastproject"
+    "slogan";
+  @media (orientation: landscape) {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "head head"
+      " lastproject slogan ";
+  }
+  @media (orientation: portrait) and (min-width: 500px) {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "head head"
+      "slogan lastproject ";
+  }
+  div {
+    padding-top: 1vh;
+    display: flex;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #e7e0e0;
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 16px;
+      text-align: center;
+    }
+    img {
+      height: 20vh;
+      margin: 3vh;
+    }
+  }
+  .portfolio__head {
+    grid-area: head;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #607d8b;
+    margin: 0;
+    padding: 0vh 2vh;
+    text-align: center;
+    @media (min-width: 400px) {
+      font-size: 28px;
+    }
+    @media (min-width: 500px) {
+      font-size: 36px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 42px;
+    }
+  }
+  .lastproject {
+    grid-area: lastproject;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 30vh;
+    }
+    @media (min-width: 500px) {
+      flex-direction: column;
+    }
+    @media (min-width: 700px) {
+      font-size: 30px;
+      img {
+        height: 40vh;
+      }
+    }
+    @media (min-width: 1199px) {
+      font-size: 30px;
+      img {
+        height: 50vh;
+      }
+    }
+  }
+  .slogan {
+    grid-area: slogan;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1vh;
+    font-size: 14px;
+    text-align: center;
+    background-color: #c3d2d9;
+    @media (min-width: 500px) {
+      flex-direction: column;
+      img {
+        height: 25vh;
+      }
+    }
+    @media (min-width: 700px) {
+      font-size: 22px;
+    }
+  }
+}
+
+.contact {
+  background-color: white;
+  height: 90vh;
+  background-image: url("../img/internet-1028794_640.jpg");
+  opacity: 0.85;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  div {
+    padding: 1vh;
+    padding-top: 3vh;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #262626;
+    @media (min-height: 660px) {
+      font-size: 18px;
+    }
+    @media (min-height: 800px) {
+      font-size: 20px;
+    }
+    @media (min-width: 700px) {
+      font-size: 22px;
+    }
+  }
+
+  .contact__header {
+    background-color: #607d8b;
+    padding: 5vh 0;
+    font-size: 18px;
+    @media (min-height: 660px) {
+      font-size: 20px;
+    }
+    @media (min-height: 730px) {
+      font-size: 22px;
+    }
+    @media (min-width: 700px) {
+      font-size: 28px;
+    }
+  }
+  .contact__des {
+    background-color: rgba($color: #6d7f88, $alpha: 0.1);
+  }
+  .contact__container {
+    display: flex;
+    flex-direction: column;
+    .contact__item {
+      margin-left: 3vh;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: #262626;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        height: 10vh;
+        margin-right: 3vh;
+      }
+    }
+  }
+}
+
+footer {
+  height: 10vh;
+  font-size: 10px;
+  text-align: center;
+  padding-top: 3vh;
+  background-color: black;
+  color: white;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(-3vh);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(2vh);
+  }
+}
